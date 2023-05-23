@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::table('reservations', function (Blueprint $table) {
             $table->foreignId('room_id')->constrained('rooms');
+            // $table->foreign('room_id')->references('id')->on('rooms');
         });
     }
 
